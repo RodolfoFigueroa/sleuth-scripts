@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
         path_generated = sp.load_or_prep_rasters(country, city, path_fua, path_cache)
         
-        with xr.open_dataset(path_generated) as ds:
+        with xr.open_dataset(path_generated, mask_and_scale=False) as ds:
             slope = ds["slope"].values
             excluded = ds["excluded"].values
             roads = ds["roads"].values
