@@ -1,0 +1,30 @@
+[paths]
+cache_dir = "./cache"
+fua_dir = "./fuas"
+out_dir = "./output"
+
+[coefficients]
+diffusion = [ 1, 100,]
+breed = [ 1, 100,]
+spread = [ 1, 100,]
+slope = [ 1, 100,]
+road = [ 1, 100,]
+
+[misc]
+critical_slope = 50
+
+[refinement]
+iterations = 3
+splits = 5
+winners = 3
+
+[montecarlo]
+iterations = 16
+random_seed = 42
+
+[multiprocessing]
+threads = -1
+
+[calibration]
+start_year = 2000
+indices = [ 370, 145, 365, 413, 35, 399, 372, 350, 309, 373, 375, 462, 191, 368, 76, 222, 364, 448, 398, 192, 355, 141, 44, 481, 360, 82, 423, 155, 465, 231, 247, 122, 291, 197, 183, 283, 485, 59, 409, 38, 417, 92, 226, 307, 294,]

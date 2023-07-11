@@ -29,10 +29,8 @@ if __name__ == "__main__":
     seed_sequence = np.random.SeedSequence(config["montecarlo"]["random_seed"])
     seeds = seed_sequence.generate_state(len(df))
 
-    for i, row in df.iterrows():
-        if i < config["calibration"]["start_idx"]:
-            continue
-        
+    for i in config["calibration"]["indices"]:
+        row = df.loc[i]
         if path_cache.exists():
             shutil.rmtree(path_cache)
         path_cache.mkdir(parents=True, exist_ok=True)

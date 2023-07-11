@@ -19,7 +19,7 @@ splits = 5
 winners = 3
 
 [montecarlo]
-iterations = 20
+iterations = 16
 random_seed = 42
 
 [multiprocessing]
@@ -27,4 +27,3 @@ threads = -1
 
 [calibration]
 start_year = 2000
-start_idx = 0
