@@ -84,6 +84,8 @@ if __name__ == "__main__":
             crit_slope=config["misc"]["critical_slope"],
             random_state=seeds[i],
             n_jobs=config["multiprocessing"]["threads"],
+            verbose=1,
+            log_dir=path_results
         )
 
-        model.fit(urban, wanted_years, path_results)
+        model.fit(urban, wanted_years)
