@@ -16,10 +16,12 @@ from sleuth_sklearn.estimator import SLEUTH
 
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s :: [%(levelname)s] :: %(message)s",
+    format="%(asctime)s :: [%(levelname)s] :: %(message)s (%(pathname)s::%(lineno)s)",
     handlers=[
         logging.FileHandler('sleuth.log', 'w', 'utf-8', False),
-        logging.StreamHandler(sys.stdout)])
+        logging.StreamHandler(sys.stdout)
+    ]
+)
 
 if __name__ == "__main__":
     file_name = sys.argv[1] if len(sys.argv) >= 2 else ''
