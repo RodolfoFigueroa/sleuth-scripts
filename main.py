@@ -116,7 +116,7 @@ if __name__ == "__main__":
             logging.info(f'Saved results at {path_results}')
         except Exception as e:
             logging.error(f'Error while processing {i+1}/{nrows} {city} - {country}')
-            logging.error(e)
+            logging.error(e, stack_info=True)
             continue
 
 logging.info('Finished proccessing.')
